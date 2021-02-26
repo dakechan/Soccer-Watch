@@ -1,0 +1,69 @@
+body {
+  background: black;
+}
+
+.board{
+  width: 370px;
+  padding: 15px;
+  background: #fff;
+  margin: 100px auto;
+}
+
+.timer {
+  background: black;
+  color: #fff;
+  text-align: center;
+  height: 180px;
+  line-height: 180px;
+  font-size: 80px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.btn {
+  background: rgb(167, 167, 173); 
+  margin-top: 10px;
+  width: 80px;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.inactive {
+  opacity: 0.3;
+}
+
+.new {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nbtn {
+  background: rgb(167, 167, 173);
+  margin-top: 10px;
+  width: 48%;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.idea {
+  margin-top: 10px;
+}
+
+.nnbtn{
+  background: rgb(167, 167, 173);
+  margin-top:10px;
+  width: 90%;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 auto;
+}
