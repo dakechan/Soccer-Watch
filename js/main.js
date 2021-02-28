@@ -14,6 +14,7 @@
   let elapsedTime=0;
   let mm=0;
   let ss=0;
+  let hh=0;
   let one;
   let two;
   
@@ -23,11 +24,29 @@
     const s=String(d.getSeconds()).padStart(2, '0');
     mm=d.getMinutes();
     ss=d.getSeconds();
+    hh=d.getHours();
+    hh-=9;
+    if(hh>0){
+      mm+=hh*60;
+      timer.textContent=`${mm}:${s}`;
+      timeoutId=setTimeout(()=>{
+        countUp();
+      }, 1000);
+      return;
+    }
+    //   if(hh%2===0){
+    //     mm+=60;
+    //     timer.textContent=`${mm}:${s}`;
+    //     timeoutId=setTimeout(()=>{
+    //       countUp();
+    //     }, 1000);
+    //     return;
+    // }
     timer.textContent=`${m}:${s}`;
 
     timeoutId=setTimeout(()=>{
       countUp();
-    }, 10);
+    }, 1000);
   }
 
   function setButtonStateInitial(){
@@ -130,7 +149,15 @@
     two=String(ss).padStart(2, '0');
     timer.textContent=`${one}:${two}`;
   });
-
-
-
 }
+
+
+// if(hh%2===0){
+//   mm+=60;
+//   timer.textContent=`${mm}:${s}`;
+//   timeoutId=setTimeout(()=>{
+//     countUp();
+//   }, 1000);
+//   return;
+
+// }
